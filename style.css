@@ -1,6 +1,7 @@
 body{
   background: black;
   color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button{
@@ -8,8 +9,15 @@ button{
   height: 50px;
   border-radius: 10%;
   border: 1px solid gray;
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button:hover{
   cursor: pointer;
+}
+
+input{
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
