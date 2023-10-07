@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Cart</title>
+</head>
+<body>
+  <button>Show Quantity</button>
+  
+  <button onclick="
+    addItem()
+  ">Add to Cart</button>
+
+  <button>+2</button>
+
+  <button>+3</button>
+
+  <button>+4</button>
+
+  <button>+5</button>
+
+  <button>Remove from cart</button>
+
+  <button>-2</button>
+
+  <button>-3</button>
+
+  <p class="js-cart-quantity"></p>
+
+
+  <script>
+
+    let cart = 0
+
+    function addItem(){
+      if(cart >= 15){
+        alert(`Your cart is full`)
+      } else {
+        cart += 1
+      }
+
+      console.log(cart)
+    }
+
+
+  </script>
+</body>
+</html>
