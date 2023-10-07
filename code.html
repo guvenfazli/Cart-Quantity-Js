@@ -10,22 +10,36 @@
   <button>Show Quantity</button>
   
   <button onclick="
-    addItem()
+    addItem('1')
   ">Add to Cart</button>
 
-  <button>+2</button>
+  <button onclick="
+    addItem('2')
+  ">+2</button>
 
-  <button>+3</button>
+  <button onclick="
+    addItem('3')
+  ">+3</button>
 
-  <button>+4</button>
+  <button onclick="
+    addItem('4')
+  ">+4</button>
 
-  <button>+5</button>
+  <button onclick="
+    addItem('5')
+  ">+5</button>
 
-  <button>Remove from cart</button>
+  <button onclick="
+    addItem('-1')
+  ">Remove from cart</button>
 
-  <button>-2</button>
+  <button onclick="
+    addItem('-2')
+  ">-2</button>
 
-  <button>-3</button>
+  <button onclick="
+    addItem('-3')
+  ">-3</button>
 
   <p class="js-cart-quantity"></p>
 
@@ -34,17 +48,63 @@
 
     let cart = 0
 
-    function addItem(){
-      if(cart >= 15){
-        alert(`Your cart is full`)
-      } else {
-        cart += 1
+    function addItem(quantity){
+      if(quantity === '1'){
+        if(cart >= 15){
+          alert(`Cart is full`)
+        } else{
+          cart += 1
+        }
+      } else if(quantity === '2'){
+        if(cart >= 15){
+          alert(`Cart is full`)
+        } else{
+          cart += 2
+        }
+      } else if(quantity === '3'){
+        if(cart >= 15){
+          alert(`Cart is full`)
+        } else{
+          cart += 3
+        }
+      } else if(quantity === '4'){
+        if(cart >= 15){
+          alert(`Cart is full`)
+        } else{
+          cart += 4
+        }
+      } else if(quantity === '5'){
+        if(cart >= 15){
+          alert(`Cart is full`)
+        } else{
+          cart += 5
+        }
+      } else if(quantity === '-2'){
+        if(cart <= 0){
+          alert(`You have to put items in your cart.`)
+        } else{
+          cart -= 2
+        }
+      } else if(quantity === '-3'){
+        if(cart <= 0){
+          alert(`You have to put items in your cart.`)
+        } else{
+          cart -= 3
+        }
+      } else if(quantity === '-1'){
+        if(cart <= 0){
+          alert(`You have to put items in your cart.`)
+        } else{
+          cart -= 1
+        }
       }
 
-      console.log(cart)
+      
+
+      document.querySelector('.js-cart-quantity').innerHTML = `Cart quantity: ${cart}`
     }
 
-
+      document.querySelector('.js-cart-quantity').innerHTML = `Cart quantity: ${cart}`
   </script>
 </body>
 </html>
